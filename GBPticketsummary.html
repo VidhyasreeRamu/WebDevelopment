@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Santa Clara University</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Ask Bronco " />
+<!-- css -->
+<link href="../static/registercss/bootstrap.min.css" rel="stylesheet" />
+<link href="../static/registercss/cubeportfolio.min.css" rel="stylesheet" />
+<link href="../static/registercss/style.css" rel="stylesheet" />
+
+
+
+<!-- Theme skin -->
+<link id="t-colors" href="skins/default.css" rel="stylesheet" />
+
+	<!-- boxed bg -->
+	<link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+     <!-- jQuery -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+
+     <script src="../static/js/ticketsummary.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+   <div id="wrapper">
+		<!-- start header Santa Clara University Logo-->
+		<header>
+			
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" ><img src="../static/registerimg/logo.png" alt="" width="350" height="60" /></a>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                       
+                         <li> <a href="/staff">Home</a></li>
+                        <li> <a href="logout">Logout</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header>
+	<!-- end header -->
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12" id = "ok">
+				AskBronco
+			</div>
+			
+		</div>
+	</div>
+	</section>
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-10  col-md-offset-1">
+                        <h2 class="page-header"> My Team Ticket List</h2>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+               <div class="row">
+                <div class="col-xs-12 col-sm-8 col-md-10  col-md-offset-1">
+                    <div class="panel panel-default">
+                        <h5> * Please set the appropriate filter conditions to view the tickets</h5>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form">
+									
+									<div class="form-group">
+                                            <label>Category</label>
+										<div>
+									<select class="element select medium" id="element_8" name="element_8" > 
+									<option value="" selected="selected">All</option>
+                                    <option value="1" >Add Course</option>
+                                    <option value="2" >Drop Course</option>
+                                    <option value="3" >Swap Course</option>
+                                    <option value="4" >Petition form</option>
+                                    <option value="5" >Other request related to petition form"</option>
+                                    <option value="6" >Careers Chat</option>
+                                    <option value="7" >Alumini Panel</option>
+                                    <option value="8" >Request classroom change</option>
+                                    <option value="9" >Others</option>
+
+									
+									</select>
+									</div> 
+									</div>
+									
+										<div class="form-group">
+                                           
+									</div>
+                                        
+                                    </form>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                
+									
+									 <div class="form-group">
+                                            <label>Status</label>
+										<div>
+									<select class="element select medium" id="element_9" name="element_9" > 
+										<option value="" selected="selected">All</option>
+										<option value="1" >Open</option>
+										<option value="2" >In Progress</option>
+										<option value="3" >Closed</option>
+									
+										</select>
+										</div> 
+							
+										
+										
+                                    </form>
+                                   
+
+						<div class="panel-body">
+							<div class="table-responsive">
+                                <table class="table table-hover">
+                            
+                                    <thead>
+                                        <tr>
+                                            <th>Ticket#</th>
+                                            <th>Category</th>
+                                            <th>Summary</th>
+											<th>Priority</th>
+											<th>Status</th>
+                                            <th>Creation Time</th>
+                                        </tr>
+                                    </thead>
+                                     <tbody id="TicketsBody">
+                                    </tbody>
+                                   
+                                </table>
+                            </div>
+							
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+						
+						<div class="panel-footer">
+						<div class="col-lg-3">
+                                       <button type="button" style="background-color: #b30000;border-color:#990000" class="btn btn-primary btn-block btn-lg"> <a href="Staff_Home_GBP.html" style=" color: #FFFFFF" >  Back  </a></button> 
+                                    </div>
+                                     </div>
+                    </div>
+
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+                    <!-- /.panel -->
+                   
+						
+						
+						
+                    <!-- /.panel -->
+                
+               
+                <!-- /.col-lg-6 -->
+            </div>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <script>
+
+    $('select').change(function () {
+     console.log("Called")
+     var e = document.getElementById("element_8");
+     var category = e.options[e.selectedIndex].text;
+     if (category === "All")
+        category = "%";
+     var e1 = document.getElementById("element_9");
+     var status = e1.options[e1.selectedIndex].text;
+     if (status === "All")
+        status = "%";
+     $.ajax({
+            url: '/ticketsummaryselectionstaff?category='+category+'&status='+status,
+            type: 'GET',
+            success: function(response){
+                var ticketssummary = JSON.parse(response);
+
+                var tbodyString = "";
+                for (var a=0; a < ticketssummary.length; a++) {
+                    tbodyString=tbodyString+"<tr>"
+                    +"<td>"+"<a href='/TicketDetails_StaffView.html?ticket_id="+ticketssummary[a]['TICKET_ID']+"'>"+ticketssummary[a]['TICKET_ID']+"</a></td>"
+					+"<td>"+ticketssummary[a]['CATEGORY']+"</td>"
+                    +"<td>"+ticketssummary[a]['SUMMARY']+"</td>"
+					+"<td>"+ticketssummary[a]['PRIORITY']+"</td>"
+					+"<td>"+ticketssummary[a]['STATUS']+"</td>"
+                    +"<td>"+ticketssummary[a]['CREATION_TIME']+"</td>"
+                    +"</tr>";
+                
+                }
+
+                $('#TicketsBody').html(tbodyString);
+
+                console.log(response);
+            },
+            error: function(error){
+                console.log(error);
+            }
+        });
+
+});
+  
+    </script>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/static/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/static/dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ask Bronco</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/static/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/static/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+     <script src="../static/vendor/jquery/jquery.min.js"></script>
+
+     <script src="../static/js/ticketsummary_Staff.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="/static/images/sculogo.png" alt="HTML5 Icon" width="50" height="50">
+                <a class="navbar-brand" href="index.html">Santa Clara University</a>
+                <a class="navbar-brand" href="index.html">Ask Bronco</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+            <b>
+            {% if username %}
+            <strong>{{username}} </strong>
+            {% endif %}</b>
+                
+                <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                           
+                     
+                        
+								 <li>
+                                    <a href="createTicket.html">Create Ticket Page</a>
+                                </li>
+								<li>
+                                    <a href="MyISS.html">MyISS Home Page</a>
+                                </li>
+                                <li>
+                                    <a href="index.html">Reports</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">My Team Tickets </h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+               <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form">
+									
+									<div class="form-group">
+                                            <label>Category</label>
+										<div>
+									<select class="element select medium" id="element_8" name="element_8" > 
+									<option value="" selected="selected">All</option>
+                                    <option value="1" >CPT appointment</option>
+                                    <option value="2" >OPT Appointment</option>
+                                    <option value="3" >Immigration</option>
+                                    <option value="4" >On Campus Employment - SSN</option>
+                                    <option value="5" >Reduced Course Load</option>
+                                    <option value="6" >I20</option>
+                                    <option value="7" >Visa and Travel</option>
+                                    <option value="8" >Others</option>
+
+									
+									</select>
+									</div> 
+									</div>
+									
+										<div class="form-group">
+										<label>Priority</label>
+										<div>
+									<select class="element select medium" id="element_9" name="element_9" > 
+										<option value="" selected="selected">All</option>
+										<option value="1" >Low</option>
+										<option value="2" >Medium</option>
+										<option value="3" >High</option>
+										<option value="4" >Urgent</option>
+
+										</select>
+                                           
+									</div>
+                                        
+                                    </form>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                
+									
+									 <div class="form-group">
+                                            <label>Status</label>
+										<div>
+									<select class="element select medium" id="element_10" name="element_10" > 
+										<option value="" selected="selected">All</option>
+										<option value="1" >Open</option>
+										
+										<option value="2" >Inprogress</option>
+
+										</select>
+										</div> 
+							
+										
+										
+                                    </form>
+                                   
+
+						<div class="panel-body">
+							<div class="table-responsive">
+                                <table class="table table-hover">
+                            
+                                    <thead>
+                                        <tr>
+                                            <th>Ticket#</th>
+                                            <th>Status</th>
+                                            <th>Created Time</th>
+											<th>Category</th>
+                                            <th>Summary</th>
+                                        </tr>
+                                    </thead>
+                                     <tbody id="TicketsBody_Staff">
+                                    </tbody>
+                                    
+                                </table>
+                            </div>
+							
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+						
+						<!--<div class="panel-footer">
+                                        Load More Tickets..
+                                    </div>-->
+                    </div>
+
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+                    <!-- /.panel -->
+                   
+						
+						
+						
+                    <!-- /.panel -->
+                
+               
+                <!-- /.col-lg-6 -->
+            </div>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <script>
+
+    $('select').change(function () {
+     console.log("Called")
+     var e = document.getElementById("element_8");
+     var category = e.options[e.selectedIndex].text;
+     if (category === "All")
+        category = "%";
+        var e1 = document.getElementById("element_9");
+     var priority = e1.options[e1.selectedIndex].text;
+     if (priority === "All")
+        priority = "%";  
+     var e1 = document.getElementById("element_10");
+     var status = e2.options[e2.selectedIndex].text;
+     if (status === "All")
+        status = "%";
+      
+     $.ajax({
+            url: '/ticketsummaryselection_staff?category='+category+'&priority='+priority+'&status='+status,
+            type: 'GET',
+            success: function(response){
+                var ticketssummary_staff = JSON.parse(response);
+
+                var tbodyString = "";
+                for (var a=0; a < ticketssummary_staff.length; a++) {
+                    tbodyString=tbodyString+"<tr>"
+                    +"<td>"+"<a href='/ticketsummary_Staff.html?ticket_id="+ticketssummary_staff[a]['TICKET_ID']+"'>"+ticketssummary_staff[a]['TICKET_ID']+"</a></td>"
+                    +"<td>"+ticketssummary_staff[a]['STATUS']+"</td>"
+                    +"<td>"+ticketssummary_staff[a]['CREATION_TIME']+"</td>"
+                    +"<td>"+ticketssummary_staff[a]['CATEGORY']+"</td>"
+                    +"<td>"+ticketssummary_staff[a]['SUMMARY']+"</td>"
+                    +"</tr>";
+                
+                }
+
+                $('#TicketsBody_Staff').html(tbodyString);
+
+                console.log(response);
+            },
+            error: function(error){
+                console.log(error);
+            }
+        });
+
+});
+
+  
+    </script>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/static/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/static/dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

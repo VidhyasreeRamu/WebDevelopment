@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!--Extra Add-->
+<!-- css -->
+<link href="../static/registercss/bootstrap.min.css" rel="stylesheet" />
+<link href="../static/registercss/cubeportfolio.min.css" rel="stylesheet" />
+<link href="../static/registercss/style.css" rel="stylesheet" />
+
+<!-- Theme skin -->
+<link id="t-colors" href="skins/default.css" rel="stylesheet" />
+
+        <!-- boxed bg -->
+        <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/static/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/static/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="/static/vendor/morrisjs/morris.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+    <!-- Custom Fonts -->
+    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="../static/js/itopen_tickets.js"></script>  
+    <script src="../static/js/itwip_tickets.js"></script>        
+    <script src="../static/js/itclosed_tickets.js"></script>
+ <script src="../static/js/it_comments.js"></script>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+         <div id="wrapper">
+                <!-- start header Santa Clara University Logo-->
+                <header>
+
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" ><img src="../static/registerimg/logo.png" alt="" width="350" height="50" /></a>
+                </div>
+                                   <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                       
+                         <li> <a href="manager_home.html">Home</a></li>
+                        <li> <a href="logout">Logout</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+        <div class="container">
+                <div class="row">
+                        <div class="col-lg-12" id = "ok">
+                                AskBronco
+                        </div>
+
+                </div>
+        </div>
+        </section>
+            <!-- /.navbar-static-side -->
+   <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">IT Dashboard</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+  <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-comments fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">
+                                        <table>
+                                        <tbody id="comments">&nbsp;
+                                        </tbody>
+                                        </table>
+                                        </div>
+                                    <div>Comments</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+  <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tasks fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">
+                                        <table>
+                                        <tbody id="open">&nbsp;
+                                        </tbody>
+                                        </table>
+                                        </div>
+                                    <div>Open Tickets</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+            
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+           <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">
+  <table>
+    <tbody id="wip">&nbsp;
+                                        </tbody>
+                                        </table>
+                                        </div>
+
+                                    <div>WIP Tickets</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                            
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-support fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">
+<table>
+
+                                        <tbody id="close">&nbsp;
+                                        </tbody>
+                                        </table>
+                                        </div>
+
+
+                                    <div>Closed Tickets</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                           
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+<!--Shifted here-->
+<div class="col-lg-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i>Turnaround Time
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                        Actions
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="#">Download</a>
+                                        </li>
+                                        <li><a href="#">Go to Chart</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="row">
+
+
+
+                                <!-- /.col-lg-4 (nested) -->
+                                <div class="col-lg-8">
+                                    <div id="morris-bar-chart"></div>
+                                </div>
+                                <!-- /.col-lg-8 (nested) -->
+                 </div>
+</div>
+</div>
+                    <!-- /.row -->
+
+                <!-- /.panel-body -->
+            <!-- /.panel -->
+
+            <!-- /.panel -->
+
+<!--Ended here-->
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-bar-chart-o fa-fw"></i> Ticket Rate
+                    <div class="pull-right">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                Actions
+                                <span class="caret"></span>
+                            </button>
+                             <ul class="dropdown-menu pull-right" role="menu">
+                                <li><a href="#">Download</a>
+                                </li>
+                                <li><a href="#">Go to Chart</a>
+                                </li>
+                            </ul>
+                        </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                        <div id="morris-area-chart"></div><!-- /.panel-body -->
+                    </div>
+                        <div class="panel-body">
+                            <div id="line-example"></div>
+                        </div>
+                        <div class="panel-body">
+                        <div id="line-example2"></div><!-- /.panel-body -->
+                    </div>
+                     </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i>Popular Category
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                        Actions
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="#">Download</a>
+                                        </li>
+                                        <li><a href="#">Go to Chart</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="row">
+
+
+
+                                <!-- /.col-lg-4 (nested) -->
+                                <div class="col-lg-8">
+                                    <div id="morris-bar-chart1"></div>
+                                </div>
+                                <!-- /.col-lg-8 (nested) -->
+                            </div>
+ </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-8 -->
+                <div class="col-lg-4">
+
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Staff Chart
+                        </div>
+                        <div class="panel-body">
+                            <div id="morris-donut-chart"></div>
+                   
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel-body">
+                            <div class="row">
+
+
+
+                                <!-- /.col-lg-4 (nested) -->
+                                <div class="col-lg-8">
+                                    <div id="morris-bar-chart"></div>
+                                </div>
+                                <!-- /.col-lg-8 (nested) -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-8 -->
+
+                        <!-- /.panel-body -->
+                    </div>
+
+                        <!-- /.panel-heading -->
+
+                        <!-- /.panel-body -->
+
+                        <!-- /.panel-footer -->
+                    </div>
+                    <!-- /.panel .chat-panel -->
+                         </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/static/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="/static/vendor/raphael/raphael.min.js"></script>
+    <script src="/static/vendor/morrisjs/morris.min.js"></script>
+    <script src="/static/data/itmorris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/static/dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
+                         
+                                                  
+

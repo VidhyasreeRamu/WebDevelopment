@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ask Bronco</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href=" /static/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href=" /static/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href=" /static/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href=" /static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="/static/images/sculogo.png" alt="HTML5 Icon" width="50" height="50">
+                <a class="navbar-brand" href="index.html">Santa Clara University</a>
+                <a class="navbar-brand" href="index.html">Ask Bronco</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+            <b>
+            {% if username %}
+            <strong>{{username}} </strong>
+            {% endif %}</b>
+                
+                <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+        
+
+            <div class="navbar-default sidebar" role="navigation">
+            <div style="color:#0000FF">
+                <div class="sidebar-nav navbar-collapse">
+                
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            
+                            <!-- /input-group -->
+                        </li>
+                        
+                                
+								
+								 
+                                <li>
+                            <a href="index.html"> Reports</a>
+                        </li>
+                        
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Ask Bronco</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <button type="button" class="btn btn-primary btn-lg btn-block"> <a href="ISSticketsummary.html" style="color: #FFFFFF">OPEN TICKETS IN ISS QUEUE</a></button>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <h4>Knowledge Bank</h4>
+                            <p>Find answers from 7490 Staff notes
+                                Or upload your own resolution:</p>
+                                <div class="input-group custom-search-form">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                                <br>
+                            <button type="button" class="btn btn-primary">Upload</button>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    
+                    <!-- /.panel -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <button type="button" class="btn btn-primary btn-lg btn-block"> <a href="ISSStaffticket.html" style="color: #FFFFFF">MY TICKETS</a></button>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <h4>Recommended Solutions</h4>
+                            <p>
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">
+                                        CPT Document requirements
+                                    </div>
+                                    <div class="panel-body">
+                                        <img src=" /static/images/leader.jpg" alt="HTML5 Icon" width="100%" height="200">
+                                        <p>
+                                            Make sure applicant has:
+                                            </br>Offer letter
+                                            </br>Photo id
+                                            </br>School id
+                                            </br>Department approval
+                                            </br>Unofficial webtranscript
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="panel-footer">
+                                        Read More..
+                                    </div>
+                                </div>
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">
+                                        Employment and Academic Internships
+                                    </div>
+                                    <div class="panel-body">
+                                        <img src=" /static/images/opt_prepare.jpg" alt="HTML5 Icon" width="100%" height="200">
+                                        <p>
+                                            OPT Application Process
+                                            1.Attend an OPT workshop
+                                            2.Complete and sign your Degree Completion / OPT Request
+                                            3.Prepare your OPT Application Package
+                                            4.Schedule and attend your OPT appointment
+                                            5.Collect your new I-20 from our office
+                                            6.Mail your application to USCIS
+                                        </p>
+                                    </div>
+                                    <div class="panel-footer">
+                                        Read More..
+                                    </div>
+                                </div> 
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">
+                                        Fly High! : Post Grad employment for F1 students
+                                    </div>
+                                    <div class="panel-body">
+                                        <img src=" /static/
+ images/jobs.jpg" alt="HTML5 Icon" width="100%" height="200">
+                                        <p>
+                                            TopicTime Stamp
+                                            What you can expect of this workshop2:09
+                                            What is OPT (Optional Practical Training)?4:09
+                                            Who is eligible for OPT?11:39
+                                            What could cause delays or denial?14:06
+                                            OPT Timing Considerations – when to file, when to start work19:25
+                                            How to Apply for OPT38:16
+                                            What to expect after your OPT appointment55:19
+                                            What to do after you get your card60:00
+                                            QA (hard to hear in this recording)1:05
+                                        </p>
+                                    </div>
+                                    <div class="panel-footer">
+                                        Read More..
+                                    </div>
+                                </div>      
+                            </p>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    
+                    <!-- /.panel -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <button type="button" class="btn btn-primary btn-lg btn-block"> <a href="student_dash.html" style="color: #FFFFFF">REPORTS</a></button>                        </div>
+                        <!-- /.panel-heading -->
+                        
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+            </div>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src=" /static/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src=" /static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src=" /static/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src=" /static/dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

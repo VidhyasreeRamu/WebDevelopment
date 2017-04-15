@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Santa Clara University</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Ask Bronco" />
+<!-- css -->
+<link href="../static/registercss/bootstrap.min.css" rel="stylesheet" />
+<link href="../static/registercss/cubeportfolio.min.css" rel="stylesheet" />
+<link href="../static/registercss/style.css" rel="stylesheet" />
+
+
+
+    <!-- MetisMenu CSS -->
+    <link href="/static/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/static/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Custom Fonts -->
+    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Theme skin -->
+<link id="t-colors" href="skins/default.css" rel="stylesheet" />
+
+	<!-- boxed bg -->
+	<link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+		<!-- start header Santa Clara University Logo-->
+		<header>
+			
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" ><img src="../static/registerimg/logo.png" alt="" width="350" height="60" /></a>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                       
+                        <li> <a href="MyIT.html">MyIT</a></li>
+                        <li> <a href="/home">Home</a></li>
+                        <li> <a href="logout">Logout</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header>
+	<!-- end header -->
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12" id = "ok">
+				AskBronco
+			</div>
+			
+		</div>
+	</div>
+	</section>
+        
+
+            <div class="navbar-default sidebar" role="navigation">
+            <div style="color:#0000FF">
+                <div class="sidebar-nav navbar-collapse">
+                
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            
+                            <!-- /input-group -->
+                        </li>
+                        
+                                
+								<h4>    Useful Links </h4>
+								 
+								
+								
+								<li>
+                                    <a href="https://www.scu.edu/technology/get-help/faqs/ecampus/change_ecampus_password/" style="color:#660000">How to Change Your eCampus Password</a>
+                                </li>
+                                
+                                <li>
+                            		<a href="https://www.scu.edu/technology/get-connected/wireless/#d.en.138850" style="color:#660000"> How do I connect to the SCU Wireless Network?</a>
+                        		</li>
+                        		
+                        		<li>
+                            		<a href="https://www.scu.edu/technology/get-connected/logins--accounts/" style="color:#660000"> Login/Accounts Information</a>
+                        		</li>
+                        		
+                        		
+                        
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+       <!-- Page Content -->
+     <div id="page-wrapper">
+            <div class="row">
+            <div class="col-lg-12">
+                    <h1 class="page-header" >
+                        <img src="../static/images/create_ticket.png" width="50px" height="50px">
+                        Create New IT Ticket
+                    </h1>
+                </div>
+                <!-- /.col-lg-12 -->
+          
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form" action = "{{ url_for('addrec') }}" method = "POST" enctype = "multipart/form-data">
+                               
+                                        <div class="form-group">
+                                            <label>Created By</label>
+                                            <input  name = "CreatedBy" type ="text" class="form-control" readonly placeholder="autopopulated" value ={{username}}>
+                                        </div>
+									  
+										<div class="form-group">
+                                            <label>Department</label>
+                                            <input  name = "Department" type ="text" class="form-control"  value = "IT"  readonly >
+                                        </div>
+                                        
+									<div class="form-group">
+                                            <label>Priority</label>
+										<div>
+										<select class="element select medium" class="form-control" id="element_9" name="Priority"> 
+										<option value="Low" selected="selected">Low</option>
+										<option value="Medium" >Medium</option>
+										<option value="High" >High</option>
+										<option value="Urgent" >Urgent</option>
+
+										</select>
+										</div> 
+									</div>
+									
+									<div class="form-group">
+                                            <label>Category</label>
+									<div>
+									<select class="element select medium" class="form-control" id="element_8" name="Category"> 
+									<option value="Campus Network">Campus Network</option>
+									<option value="eCampus">eCampus</option>
+									<option value="Gmail" >Gmail</option>
+									<option value="Login/Accounts" >Login/Accounts</option>
+									<option value="Campus Wireless" >Campus Wireless</option>
+									<option value="Software">Software</option>
+									<option value="Registering a device">Registering a device</option>
+									<option value="Others" >Others</option>
+
+									</select>
+									</div> 
+									</div>
+									
+										
+                <!-- /.dropdown -->
+										 <div class="form-group">
+                                            <label>Summary</label>
+                                            <textarea name="Summary" class="form-control" rows="1"></textarea>
+                                        </div>
+                                       
+                                        <div class="form-group">
+                                            <label>Description</label>
+                                            <textarea name ="Description" class="form-control" rows="4"></textarea>
+                                        </div>
+										
+										 <div class="form-group">
+                                            <label>Supporting File Upload</label>
+											<input type="file" name = "file" multiple></input>
+                                            <input type="hidden" id="OldFiles" name="OldFiles">
+                                        </div>
+										
+									
+                                        <input type="submit" class="btn btn-primary btn-lg btn""/>
+                                        
+                                    </form>
+									
+									
+								
+									
+									
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                                         
+                                   
+                              
+                                <!-- /.col-lg-6 (nested) -->
+                                
+                                 <div class="col-lg-3 col-md-offset-2">
+                    <div class="panel panel-default" style="border: none">
+						<h5>    Turnaround time by Priority </h5>
+							<div class="panel-body">
+							<div class="table-responsive ">
+
+						<table class="table table-hover">
+									<tbody>
+											<tr>
+											<td><strong>Urgent</strong></td>
+											<td>3-4 hours</td>
+											</tr>
+											<tr>
+											<td><strong>High</strong></td>
+											<td>1 Business day</td>
+											</tr>
+											<tr>
+											<td><strong>Medium</strong></td>
+											<td>3 Business days</td>
+											</tr>
+											<tr>
+											<td><strong>Low</strong></td>
+											<td>4 Business days</td>
+											</tr>
+									</tbody>
+						</table>	
+							
+                        <!-- /.panel-heading -->
+                       
+
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/static/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/static/dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

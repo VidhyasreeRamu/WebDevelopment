@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Santa Clara University</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Ask Bronco Login" />
+<!-- css -->
+<link href="../static/registercss/bootstrap.min.css" rel="stylesheet" />
+<link href="../static/registercss/cubeportfolio.min.css" rel="stylesheet" />
+<link href="../static/registercss/style.css" rel="stylesheet" />
+
+
+
+<!-- Theme skin -->
+<link id="t-colors" href="skins/default.css" rel="stylesheet" />
+
+	<!-- boxed bg -->
+	<link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+     <!-- jQuery -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/js/myISS.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+   
+
+</head>
+
+<body font color="#000" >
+
+    <div id="wrapper">
+		<!-- start header Santa Clara University Logo-->
+		<header>
+			
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" ><img src="../static/registerimg/logo.png" alt="" width="350" height="60" /></a>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                       
+                         <li> <a href="/home">Home</a></li>
+                        <li> <a href="logout">Logout</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header>
+	<!-- end header -->
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12" id = "ok">
+				AskBronco
+			</div>
+			
+		</div>
+	</div>
+	</section>
+        
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                 	<div class="col-xs-12 col-sm-12 col-md-10  col-md-offset-1">
+                    
+                        <h2 class="page-header" > {% if username %}<strong> MyISS Home</strong> {% endif %} </h2>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                
+                <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12  col-md-offset-1">
+                
+                <div class="col-lg-7">
+                <div class="panel panel-default">
+						<div class="panel-heading" >
+                                        {% if username %}<strong> {{username}}'s  Recent Tickets </strong> {% endif %} 
+                        </div>
+						<div class="panel-body" >
+							<div class="table-responsive table-bordered">
+                                <table class="table table-hover" color:"#000"id="recentTickets">
+                                    <thead>
+                                        <tr>
+                                            <th>Ticket#</th>
+                                            <th>Status</th>
+                                            <th>Open Date</th>
+                                            <th>Category</th>
+                                            <th>Summary</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="recentTicketsBody">
+                                    </tbody>
+                                </table>
+                            </div>
+							
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+						
+						<div class="panel-footer">
+										<a href="ticketsummary.html" style="color:#990000">
+                                        Load More Tickets..</a>
+                                    </div>
+                    	</div>
+                    <!-- /.panel -->
+                   
+						
+						<div class = "panel-heading">
+								<b>Drop-in Advising&nbsp;hours</b>
+						</div>
+						
+						<div class="panel-body">
+							<div class="table-responsive ">
+
+						<table class="table table-hover">
+									<tbody>
+											<tr>
+											<td><strong>Program</strong></td>
+											<td><strong>Monday</strong></td>
+											<td><strong>Tuesday</strong></td>
+											<td><strong>Wednesday</strong></td>
+											<td><strong>Thursday</strong></td>
+											<td><strong>Friday</strong></td>
+											</tr>
+											<tr>
+											<td><strong>ISS Program</strong></td>
+											<td>2:00 PM - 4:00 PM PST</td>
+											<td>2:00 PM - 4:00 PM PST</td>
+											<td>10:00 AM - 12:00 NOON PST</td>
+											<td>10:00 AM - 12:00 NOON PST</td>
+											<td>10:00 AM - 12:00 NOON PST</td>
+											</tr>
+											<tr>
+											<td><strong>Study Abroad</strong></td>
+											<td>10:00 AM - 12 NOON PST</td>
+											<td>10:00 AM - 12 NOON PST</td>
+											<td>2:00 PM - 4:00 PM PST</td>
+											<td>2:00 PM - 4:00 PM PST</td>
+											<td>By appointment only.</td>
+											</tr>
+									</tbody>
+						</table>	
+							
+							
+						</div>
+						<!-- /.panel -->
+						
+						<div class="panel-body">
+						
+						<h5><b>Office Hours</b></h5>
+						<p>The Global Engagement Office is open
+						<strong>Monday through Friday</strong>, from <strong>8:00 a.m. to 12:00 noon and 
+						1:00 p.m. to 5:00 p.m PST.</strong></p>
+						
+						</div>
+						<div class="panel-body">
+							<h5><b>Campus Location</b></h5>
+							<p>The Global Engagement Office is located on the <a href="http://www.scu.edu/map/58/Varsi+Hall">1st floor of Varsi Hall</a>.</p>
+						</div>
+
+						<div class="panel-body">
+							<p><strong>Tel: </strong>(001)<strong>&nbsp;</strong>(408) 551-3019<br><strong>SCU Campus Safety 24 Hr Emergency:</strong>&nbsp;(001) (408) 554-4444<br><strong>Email:</strong><br>Global Engagement Office:&nbsp;<a href="mailto:geo@scu.edu">geo@scu.edu</a>&nbsp;<br>International Students &amp; Scholars:&nbsp;<a href="mailto:iss@scu.edu">iss@scu.edu</a>&nbsp;<br>SCU Study Abroad:&nbsp;<a href="mailto:studyabroad@scu.edu">studyabroad@scu.edu</a></p>
+						</div>
+						<div class="panel-body">
+							<p>SCU's International Students &amp; Scholars uses the&nbsp;<a href="https://lists.scu.edu/mailman/listinfo/provost-iss-students">ISS Mailing List</a>&nbsp;for all communication relevant to F-1 and J-1 students, including those on OPT.</p>
+							<p>ISS Standard response time for email is two business days; please wait two business days prior to contacting again &nbsp;</p>
+							<h5>Mailing Address</h5>
+							<p>Global Engagement Office<br>Varsi Hall, First Floor<br>Santa Clara University<br>500 El Camino Real<br>Santa Clara, CA 95053-0292</p>
+							<p>USA</p>
+						</div>
+
+						</div>
+					</div>
+					
+						
+                    <!-- /.panel -->
+                
+                <div class="col-lg-3">
+                    <div class="panel panel-default">
+						<div class="panel-body">
+							<button type="button" style="background-color: #C70039;border-color:#C70039" class="btn btn-primary btn-block btn-lg"> <a href="createTicket.html" style=" color: #FFFFFF" >  Log a New Ticket  </a></button> 
+						</div>	
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <h4>Recommended Articles</h4>
+                            <p>
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">
+                                        Student Life beyond the Classroom
+                                    </div>
+                                    <div class="panel-body">
+                                        <img src="../static/images/leader.jpg" alt="HTML5 Icon" width="100%" height="200">
+                                        <p>
+                                            Become a student leader! <br/>
+                                            Applications now available for several roles: <br/>
+                                            Council of Graduate Students in Business (CGSB) <br/>
+                                            Inter-Network Council (INC) Programming Board <br/>
+                                            Graduate Peer Advisors <br/>
+                                            Career Ambassadors <br/>
+                                            Admission Ambassadors <br/>
+                                        </p>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <form action="https://www.scu.edu/csi/leadership/">
+                                        <input type="submit" value="Read More" />
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">
+                                        Employment and Academic Internships
+                                    </div>
+                                    <div class="panel-body">
+                                        <img src="../static/images/opt_prepare.jpg" alt="HTML5 Icon" width="100%" height="200">
+                                        <p>
+                                            OPT Application Process <br/>
+                                            1.Attend an OPT workshop <br/>
+                                            2.Complete and sign your Degree Completion / OPT Request <br/>
+                                            3.Prepare your OPT Application Package <br/>
+                                            4.Schedule and attend your OPT appointment <br/>
+                                            5.Collect your new I-20 from our office <br/>
+                                            6.Mail your application to USCIS <br/>
+                                        </p>
+                                    </div>
+                                    <div class="panel-footer">
+                                         <form action="https://www.scu.edu/globalengagement/international-students/working--academic-internships/">
+                                        <input type="submit" value="Read More" />
+                                        </form>
+                                    </div>
+                                </div> 
+                                
+                            </p>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+            </div>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+   
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../static/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../static/dist/js/sb-admin-2.js"></script>
+
+   
+
+</body>
+
+</html>

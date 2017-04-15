@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Staff's ticket details">
+
+    <title>Santa Clara University</title>
+
+    <!-- Bootstrap Core CSS -->
+
+    <link href="/static/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+
+    <!-- Font Awesome CSS -->
+    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+    <!-- MetisMenu CSS -->
+
+    <link href="/static/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+
+
+    <!-- Custom CSS -->
+
+    <link href="/static/dist/css/sb-admin-2.css" rel="stylesheet">
+
+
+
+    <!-- Custom Fonts -->
+
+    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/js/staffticketdeets.js"></script>  
+
+
+
+</head>
+
+
+
+<body>
+    <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                </button>
+                    <a class="navbar-brand" ><img src="../static/registerimg/logo.png" alt="" width="350" height="60" /></a>
+                </div>
+            <!-- /.navbar-header -->
+
+            <div class="nav navbar-top-links navbar-right">
+                
+                <!-- /.dropdown -->
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                       
+                         <li> <a href="/staff">HOME</a></li>
+                        <li> <a href="logout">LOGOUT</a></li>
+                        
+                    </ul>
+                </div>
+                <!-- /.dropdown -->
+            </div>
+            <!-- /.navbar-top-links -->
+            <!-- /.navbar-static-side -->
+        </nav>
+    <div id="container">
+        <div id="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="row">
+                    <h1 class="page-header" >
+                        <img src="../static/images/ticket.png" width="50px" height="50px">
+                        <span id="ticketno"></span>
+                        <span class="pull-right">
+                            <img id = "statusImg"  width="50px" height="50px">
+                            <span id="status"></span>
+                        </span>
+                    </h1>
+                      
+                </div>
+
+                <!-- /.row -->
+                <div class="row">                  
+
+                        <div class="panel panel-default">  
+                            <div class="panel-heading">
+                              <span class=" fa-stack">
+                              <i class="fa fa-circle fa-stack-2x"></i>
+                              <i class="fa fa-info fa-stack-1x fa-inverse"></i> </span><span>Ticket Details</span>
+                            </div>                        
+                            <div class="panel-body">
+                                <form role="form">
+                                    <div class="row">
+                                        <div class="form-group col-lg-12">
+                                            <label>Summary</label>
+                                            <input type="hidden" id="TicketId" name="TicketId">
+                                            <input id="Summary" class="form-control" name = "Summary" readonly></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-lg-6">
+                                            <label>Created By</label>
+                                            <input  id = "userName" name = "CreatedBy" type ="text" class="form-control" readonly>
+                                        </div>
+                                        <div class="form-group  col-lg-6">
+                                            <label>Created On</label>
+                                            <input  id="createdOn" type ="text" class="form-control" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group  col-lg-6">
+                                            <label>Priority</label>
+                                            <div>
+                                                <select class="form-control element select medium" id="priority" name="Priority" readonly> 
+                                                <option value="Low">Low</option>
+                                                <option value="Medium" >Medium</option>
+                                                <option value="High" >High</option>
+                                                <option value="Urgent" >Urgent</option>
+                                                </select>
+                                            </div> 
+                                        </div>  
+                                        <div class="form-group  col-lg-6">
+                                            <label>Closed On</label>
+                                            <input  id = "closedTime" type ="text" class="form-control"  readonly >
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-lg-6">
+                                            <label>Department</label>
+                                            <input  id = "Department" name = "Department" type ="text" class="form-control"  readonly >
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <label>Category</label>
+                                            <div>
+                                                <select class="form-control element select medium" id="category" name="Category" readonly> 
+                                                </select>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-lg-6">
+                                            <label>Assigned To</label>
+                                            <input  id = "StaffName" name = "staffname" type ="text" class="form-control"  readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-lg-12">
+                                            <label>Description</label>
+                                            <textarea id="Description" name = "Description" class="form-control" rows="4" readonly></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group  col-lg-12">
+                                            <label>Supporting File(s)</label><span id="uploadedFile"></span>
+                                            <input type="hidden" id="OldFiles" name="OldFiles">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group  col-lg-12">
+                                            <label>Upload New File</label>
+                                            <input type="file" name = "file"></input>        
+                                        </div>
+                                    </div>      
+                                 </form>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="row">
+                    <div class="panel panel-default">      
+                        <div class="panel-heading">
+                                <span class=" fa-stack">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-briefcase fa-stack-1x fa-inverse"></i> </span> Actions
+                                
+                            </div>                    
+                        <div class="panel-body">
+                            <div class="row">
+                                        
+                                    </div>
+                            <div class="row">   
+                                <div class="form-group  col-lg-12">
+                                    <button type="button" id="acceptBtn" class="btn btn-primary  ">Accept</button>
+                                    <button type="button" id="closeBtn" class="btn btn-secondary ">Close</button>
+                                    <button type="button" id="updateBtn" class="btn btn-secondary ">Update Ticket</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    
+                        <div class="panel panel-default"> 
+                            <div class="panel-heading">
+                                  <span class=" fa-stack">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-comments fa-stack-1x fa-inverse"></i> </span>
+                                  <span>Comments</span>
+                                  <button type="button" class="pull-right btn btn-warning btn-circle" data-toggle="modal" data-target="#addComments">
+                                    <i class="fa fa-plus"></i>
+                                   </button>
+                                  
+                            </div>                          
+                            <div class="panel-body">
+                                    <ul class="timeline" id="comments">
+                                    </ul>
+                                </div>
+                        </div>
+                </div>
+                <div class="row">
+                                                                            
+                        <!-- /.panel -->
+                        <div class="chat-panel panel panel-default">
+                            <div class="panel-heading">
+                                <span class=" fa-stack">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-sticky-note-o fa-stack-1x fa-inverse"></i> </span> Work Notes
+                                <button type="button" class="pull-right btn btn-info btn-circle" data-toggle="modal" data-target="#addNotes">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <ul class="chat" id="WorkNotes">
+                                </ul>
+                            </div>
+                            <!-- /.panel-body -->
+                            
+                        </div>
+                        <!-- /.panel .chat-panel -->
+
+                   
+                </div>
+                
+            <!-- /.row -->
+            </div>
+        </div>
+    </div>
+
+
+<!-- Comments Modal -->
+<div class="modal fade" id="addComments" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Enter your comment below
+                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+                
+                <form role="form">
+                  <div class="form-group">
+                    <textarea id="newComment" class="form-control" rows="5">
+                    </textarea>
+                  </div>
+                </form>
+                
+                
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">
+                            Close
+                </button>
+                <button type="button" class="btn btn-primary" id="btnAddComment">
+                    Add Comment
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Notes Modal -->
+<div class="modal fade" id="addNotes" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Enter your notes below
+                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+                
+                <form role="form">
+                  <div class="form-group">
+                    <textarea id="newNote" class="form-control" rows="5">
+                    </textarea>
+                  </div>
+                </form>
+                
+                
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">
+                            Close
+                </button>
+                <button type="button" class="btn btn-primary" id="btnAddNote">
+                    Add Notes
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- jQuery -->
+
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+
+
+
+    <!-- Bootstrap Core JavaScript -->
+
+    <script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+    <!-- Metis Menu Plugin JavaScript -->
+
+    <script src="/static/vendor/metisMenu/metisMenu.min.js"></script>
+
+
+
+    <!-- Custom Theme JavaScript -->
+
+    <script src="/static/dist/js/sb-admin-2.js"></script>
+
+
+
+</body>
+
+
+
+</html>
+
